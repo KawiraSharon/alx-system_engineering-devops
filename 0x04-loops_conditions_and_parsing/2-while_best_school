@@ -4,6 +4,6 @@
 i=1
 while((i <= 10))
 do
-    echo "Best School"
-    let i++
+	echo "Best School"
+	let i++
 done
