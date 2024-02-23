@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Program writes "I am alive" to the file /tmp/my_process indefinitely
+# Program writes "I am alive" to file (/tmp/my_process) indefinitely
 
 while true
 do
