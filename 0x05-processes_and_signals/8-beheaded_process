@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Program kills highlander of file 7
+
+pkill -f -SIGKILL 7-highlander
