@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
-# Displays acttive addresses IPv4 on mchn.
+# Displays all acive IPv4 addresses on IPv4 machine.
 
-ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | cut -b 11-
+# using ifconfig but make ip a new cmd could go missing in some operating systems
+# awk '{print $2}'
+
+ip -4 -o addr show | awk '{print $4}' | cut -d "/" -f 1
