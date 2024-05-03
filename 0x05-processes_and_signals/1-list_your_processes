@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Program display list>current running processes, show users
+
+ps -auxf
