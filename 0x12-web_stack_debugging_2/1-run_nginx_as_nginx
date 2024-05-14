@@ -1,0 +1,13 @@
+#!/bin/bash/env bash
+# Change the user that Nginx runs as to nginx
+
+sed -i 's/user\s*nginx;/user nginx;/' /etc/nginx/nginx.conf
+
+# Change the permissions of Nginx files to make sure nginx user can access them
+chown -R nginx:nginx /var/log/nginx /var/lib/nginx /var/www/html
+
+# Make Nginx listen on all active IPs on port 8080
+sed -i 's/listen\s*80;/listen 8080;/g' /etc/nginx/sites-available/default
+
+# Restart Nginx to apply changes
+service nginx restart
